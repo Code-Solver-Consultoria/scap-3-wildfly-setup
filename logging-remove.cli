@@ -1,0 +1,13 @@
+batch
+
+#/subsystem=logging/logger=org.hibernate.type.descriptor.sql:remove
+
+#/subsystem=logging/logger=org.hibernate.SQL:remove
+
+/subsystem=logging/logger=br.com.digicon:remove
+
+/subsystem=logging/periodic-rotating-file-handler=DIGICON:remove
+	
+run-batch
+
+:reload

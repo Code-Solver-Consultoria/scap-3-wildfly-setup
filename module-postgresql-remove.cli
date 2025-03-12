@@ -1,0 +1,10 @@
+batch
+
+
+/subsystem=datasources/jdbc-driver=postgresql:remove
+	
+module remove --name=org.postgresql
+
+run-batch
+
+:reload

@@ -1,0 +1,9 @@
+batch
+
+data-source disable --name=scapDS
+
+data-source remove --name=scapDS 
+	
+run-batch
+
+:reload

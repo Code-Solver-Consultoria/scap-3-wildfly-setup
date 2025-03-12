@@ -1,0 +1,21 @@
+batch
+
+/subsystem=logging/periodic-rotating-file-handler=DIGICON:add( \
+	append=true,autoflush=true,enabled=true, suffix=.yyyy-MM-dd, \
+	file={relative-to=jboss.server.log.dir,path=digicon.log}, \
+	level=ALL,name=DIGICON)
+	
+# Log da Digicon
+/subsystem=logging/logger=br.com.digicon:add( \
+	category=br.com.digicon,handlers=[DIGICON,CONSOLE],level=ALL)
+	
+# Log do Hibernate (SQL)
+#/subsystem=logging/logger=org.hibernate.SQL:add( \
+#	category=org.hibernate.SQL,handlers=[DIGICON,CONSOLE],level=DEBUG)
+
+#/subsystem=logging/logger=org.hibernate.type.descriptor.sql:add( \
+#	category=org.hibernate.type.descriptor.sql,handlers=[DIGICON,CONSOLE],level=TRACE)
+
+run-batch
+
+:reload

@@ -1,0 +1,10 @@
+batch
+
+# Removido por já estar presente na configuração inicial:
+#/socket-binding-group=standard-sockets/socket-binding=ajp:remove
+
+/subsystem=undertow/server=default-server/ajp-listener=ajp:add(socket-binding=ajp, scheme=http, enabled=true)
+
+run-batch
+
+:reload

@@ -1,0 +1,10 @@
+batch
+
+# Removido por já estar presente na configuração inicial:
+#/socket-binding-group=standard-sockets/socket-binding=ajp:add(port=8009)
+
+/subsystem=undertow/server=default-server/ajp-listener=ajp:remove
+
+run-batch
+
+:reload
