@@ -4,7 +4,7 @@ data-source add \
 	--name=scapDS \
 	--jndi-name=java:/datasources/scapDS \
 	--driver-name=postgresql \
-	--connection-url=jdbc:postgresql://scap-ort.digiconsp:5432/scap \
+	--connection-url=jdbc:postgresql://localhost:5432/scap \
 	--user-name=scap_user \
 	--password=digicon \ 
 	--jta=true \
@@ -15,7 +15,7 @@ data-source add \
 	--exception-sorter-class-name=org.jboss.jca.adapters.jdbc.ExceptionSorter \
 	--valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.ValidConnectionChecker
 	
-data-source enable --name=scapDS
+# data-source enable --name=scapDS
 		
 run-batch
 
