@@ -2,7 +2,7 @@ batch
 
 module add \
 	--name=org.postgresql \
-	--resources=postgresql-42.2.5.jar \
+	--resources=postgresql-42.7.5.jar \
 	--dependencies=javax.api,javax.transaction.api
 	
 /subsystem=datasources/jdbc-driver=postgresql:add( \
