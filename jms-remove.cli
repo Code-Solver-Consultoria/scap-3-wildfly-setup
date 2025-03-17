@@ -1,0 +1,9 @@
+batch
+
+jms-queue remove --queue-address=scap-passage 
+
+/subsystem=messaging/hornetq-server=default/security-setting=#/role=SYSTEM:remove()
+
+run-batch
+
+:reload

@@ -1,0 +1,6 @@
+batch
+
+/subsystem=ejb3:write-attribute(name=default-missing-method-permissions-deny-access, value=false)
+
+run-batch
+:reload

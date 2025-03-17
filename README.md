@@ -43,3 +43,7 @@
 ## datasource
  
  Configura uma conexão com um banco de dados. Os drivers para acesso ao banco de dados devem ser disponibilizados como módulos.
+
+### jms
+
+Configura as filas de processamento paralelo.

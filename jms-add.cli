@@ -1,0 +1,12 @@
+batch
+
+/subsystem=messaging/hornetq-server=default/security-setting=#/role=SYSTEM:add( \
+    send=true,\
+    consume=true,\
+    manage=true)
+
+jms-queue add --queue-address=scap-passage --entries=java:/queue/scap-passage
+
+run-batch
+
+:reload
